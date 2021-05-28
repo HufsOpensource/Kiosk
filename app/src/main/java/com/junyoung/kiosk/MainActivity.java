@@ -1,13 +1,10 @@
 package com.junyoung.kiosk;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -29,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             image_rotate.setAnimation(rotateAnimation);
         }
         Handler handler = new Handler();
-        final Intent intent = new Intent(this,Home.class);
+        final Intent intent = new Intent(this, Home.class);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
