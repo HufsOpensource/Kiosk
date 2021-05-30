@@ -11,13 +11,16 @@
         android:layout_width="match_parent"
         android:layout_weight="5"
         android:background="#000"
-        android:layout_height="0dp"
+        android:layout_height="30dp"
         android:gravity="center"
         >
         <TextView
 
             android:layout_gravity="center"
             android:text="장바구니"
+            android:layout_marginTop="3sp"
+            android:textSize="26sp"
+            android:fontFamily="@font/aa"
             android:textColor="#ffffff"
 
             android:layout_width="wrap_content"
@@ -32,7 +35,12 @@
             android:id="@+id/basket_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="테스트테스트"/>
+            android:text="장바구니 목록"
+            android:textSize="15sp"
+            android:textColor="#a5a5a5"
+            android:fontFamily="@font/aa"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"/>
         <TextView
             android:id="@+id/basket_text2"
             android:layout_width="wrap_content"
