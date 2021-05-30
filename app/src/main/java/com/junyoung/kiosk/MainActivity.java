@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -11,7 +12,9 @@ import android.widget.ImageView;
 
 import com.junyoung.kiosk.component.Home;
 
+
 public class MainActivity extends AppCompatActivity {
+    private Button buttonNext;
 
     private android.view.animation.Animation Animation;
 
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ImageView image_rotate = findViewById(R.id.image_rotate);
         if (image_rotate.getAnimation() == null) {
             Animation rotateAnimation = AnimationUtils.loadAnimation (getApplicationContext(), R.anim.anim_image);
@@ -35,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
         }, 1000);
 
         
+
     }
 }
