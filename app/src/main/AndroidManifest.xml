@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".component.MakeRoom"></activity>
-        <activity android:name=".component.Home"></activity>
-        <activity android:name=".component.ShoppingBasket">
-
-        </activity>
+        <activity android:name=".component.TotalMenuList"></activity>
+        <activity android:name=".component.MakeRoom" />
+        <activity android:name=".component.Home" />
+        <activity android:name=".component.ShoppingBasket"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
