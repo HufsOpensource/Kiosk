@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".donggeon1">
+
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4B89DC"
+        android:textSize="20sp"
+        android:text="결제 금액:"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF7E7E"
+        android:textSize="20sp"
+        android:text="결제 방법 선택 "
+        android:layout_gravity="center"/>
+
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:text="결제 하기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Hufspay"
+            android:text="외대 페이"/>
+
+        <RadioButton
+            android:id="@+id/Toss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="토스" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Kakao"
+            android:text="카카오 페이"/>
+
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnOk"
+        android:text="선택 완료"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/ImgPet"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Pay_finish"
+        android:text="결제 완료"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+

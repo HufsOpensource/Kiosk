@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    android:id="@+id/menu_total_linear"
     android:weightSum="100"
-    android:id="@+id/Linear_recycler"
     android:layout_height="80dp">
     <ImageView
-        android:id="@+id/shop_image"
+
         android:layout_gravity="center"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_weight="15"
         />
     <LinearLayout
-        android:id="@+id/linear_tuto"
+
         android:layout_weight="70"
         android:layout_width="0dp"
         android:orientation="vertical"
@@ -23,57 +23,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:padding="1dp"
-            android:layout_weight="5"
+            android:layout_weight="10"
             android:weightSum="100"
             android:layout_height="0dp">
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="40"
-                android:text="메뉴:"
+                android:layout_weight="30"
+                android:text="상호명:"
                 android:textSize="16dp"
-                android:fontFamily="@font/aaa"
                 android:gravity="center"
                 android:textColor="#000"
                 android:layout_height="match_parent"/>
             <TextView
-                android:layout_weight="60"
-                android:id="@+id/item_title"
-                android:text="title"
-                android:textSize="16dp"
-                android:fontFamily="@font/aaa"
+                android:id="@+id/text_company"
+                android:layout_weight="70"
+                android:text=""
+                android:textSize="18dp"
                 android:gravity="center"
                 android:textColor="#3c5b9a"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="1dp"
-            android:layout_weight="5"
-            android:weightSum="100"
-            android:layout_height="0dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="40"
-                android:text="정보:"
-                android:textSize="16dp"
-                android:fontFamily="@font/aaa"
-                android:gravity="center"
-                android:textColor="#000"
-                android:layout_height="match_parent"/>
 
-            <TextView
-                android:id="@+id/item_description"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="60"
-                android:fontFamily="@font/aaa"
-                android:gravity="center"
-                android:text="비밀번호"
-                android:textColor="#3c5b9a"
-                android:textSize="16dp" />
-        </LinearLayout>
 
     </LinearLayout>
     <ImageView

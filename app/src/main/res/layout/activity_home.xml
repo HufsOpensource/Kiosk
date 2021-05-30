@@ -11,12 +11,15 @@
         android:layout_width="match_parent"
         android:layout_weight="5"
         android:background="#000"
-        android:layout_height="0dp"
+        android:layout_height="30dp"
         android:gravity="center">
         <TextView
 
             android:layout_gravity="center"
+            android:layout_marginTop="2dp"
             android:text="Home"
+            android:textSize="28sp"
+            android:fontFamily="@font/aa"
             android:textColor="#ffffff"
 
             android:layout_width="wrap_content"
@@ -27,30 +30,39 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="95">
+
         <Button
             android:id="@+id/btn_home_makeroom"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="285dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="19dp"
 
             android:background="@drawable/roomenter_box"
+            android:drawableTop="@drawable/home_new"
             android:elevation="10dp"
-            android:theme="@style/MyButton"
+            android:fontFamily="@font/aa"
             android:text="업소 생성"
-            android:textColor="#000"
-            android:textSize="32dp" />
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:theme="@style/MyButton" />
+
         <Button
             android:id="@+id/btn_home_enterroom"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="285dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="7dp"
 
             android:background="@drawable/roomenter_box"
+            android:drawableTop="@drawable/home_entry"
             android:elevation="10dp"
-            android:theme="@style/MyButton"
+            android:fontFamily="@font/aa"
             android:text="업소 입장"
-            android:textColor="#000"
-            android:textSize="32dp" />
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:theme="@style/MyButton" />
+
         <LinearLayout
             android:id="@+id/image_goshop"
             android:layout_width="match_parent"

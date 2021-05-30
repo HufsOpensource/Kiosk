@@ -3,11 +3,9 @@ package com.junyoung.kiosk.component
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.junyoung.kiosk.R
-import java.text.DecimalFormat
 import java.util.*
 
 class RecyclerAdapter(

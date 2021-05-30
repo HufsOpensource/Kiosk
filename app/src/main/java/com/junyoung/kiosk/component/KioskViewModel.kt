@@ -3,7 +3,6 @@ package com.junyoung.kiosk.component
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class KioskViewModel: ViewModel() {
@@ -13,31 +12,33 @@ class KioskViewModel: ViewModel() {
     val LiveData = MutableLiveData<ArrayList<FireData>>()
     val LiveComponyData = MutableLiveData<ArrayList<FireComponyName>>()
     fun getData() {
-        db.collection("kiosk")
-                .document("kioskdata")
+        db.collection("kioskpocha")
                 .addSnapshotListener{value, e->
                     if(e!=null) {
                         return@addSnapshotListener
                     }
-                    val firedata = FireData(
-                            title = value!!["title"].toString(),
-                            description = value!!["description"].toString()
-                    )
-                    data.add(firedata)
-                    LiveData.value = data
+                    data.clear()
+                    for(document in value!!) {
+                        val firedata = FireData(
+                                title=document.data["title"].toString(),
+                                description = document.data["description"].toString(),
+                                componyname = document.data["componyname"].toString(),
+                                image=document.data["image"].toString()
+                        )
+                        data.add(firedata)
+                        LiveData.value = data
+                    }
                 }
     }
     //단일 상호명을 저장하기 위한 함수
-    fun addcomponyname(item:FireComponyName) {
-        val hashdata = hashMapOf(
-                "myname" to item.myname
-        )
+    fun addcomponyname(item: String) {
+
         db.collection("kioskpocha")
                 .document("componyname")
-                .set(hashdata)
+                .set(item)
     }
     //Home에 저장하기 위한 모든 상호명 목록
-    fun getcompanyname(item:FireComponyName) {
+    fun getcompanyname() {
         db.collection("kioskpocha")
                 .document("componyname")
                 .addSnapshotListener{value,e->
