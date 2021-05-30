@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:layout_height="match_parent"
+    tools:context=".component.Home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:background="#000"
+        android:layout_height="0dp"
+        android:gravity="center">
+        <TextView
+
+            android:layout_gravity="center"
+            android:text="Home"
+            android:textColor="#ffffff"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="95">
+        <Button
+            android:id="@+id/btn_home_makeroom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+
+            android:background="@drawable/roomenter_box"
+            android:elevation="10dp"
+            android:theme="@style/MyButton"
+            android:text="업소 생성"
+            android:textColor="#000"
+            android:textSize="32dp" />
+        <Button
+            android:id="@+id/btn_home_enterroom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+
+            android:background="@drawable/roomenter_box"
+            android:elevation="10dp"
+            android:theme="@style/MyButton"
+            android:text="업소 입장"
+            android:textColor="#000"
+            android:textSize="32dp" />
+        <LinearLayout
+            android:id="@+id/image_goshop"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/Linear_background"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom">
+
+
+                <ImageView
+                    android:id="@+id/image_home_hightlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_home_highlight"
+                    android:src="@drawable/ic_baseline_shopping_basket_24" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
