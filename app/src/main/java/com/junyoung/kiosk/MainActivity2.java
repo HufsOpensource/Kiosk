@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.junyoung.kiosk.component.ShoppingBasket;
+
 public class MainActivity2 extends AppCompatActivity {
     private static final String TAG = "MainActivity_ms";
 
     private TextView tvCount, tvCost;
-    private Button btnPlus, btnMinus, btnpayment;
+    private Button btnPlus, btnMinus, btnShoppingBasket;
     private int count=1;
     private int cost = 5000;
 
@@ -28,7 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         tvCost.setText(cost*count+"");
         btnPlus=findViewById(R.id.btnP);
         btnMinus=findViewById(R.id.btnM);
-        btnpayment=findViewById(R.id.payment);
+        btnShoppingBasket=findViewById(R.id.shopping_basket_btn);
 
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,9 +54,9 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
 
-        btnpayment.setOnClickListener(new View.OnClickListener(){
+        btnShoppingBasket.setOnClickListener(new View.OnClickListener(){
             public void onClick(View arg) {
-                Intent intent = new Intent(getApplicationContext(), donggeon1.class);
+                Intent intent = new Intent(getApplicationContext(), ShoppingBasket.class);
                 startActivity(intent);
             }
         });
