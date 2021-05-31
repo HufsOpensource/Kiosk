@@ -28,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
         tvCost.setText(cost*count+"");
         btnPlus=findViewById(R.id.btnP);
         btnMinus=findViewById(R.id.btnM);
-        btnpayment=findViewById(R.id.payment);
+        btnpayment=findViewById(R.id.shopping_basket_btn);
 
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
