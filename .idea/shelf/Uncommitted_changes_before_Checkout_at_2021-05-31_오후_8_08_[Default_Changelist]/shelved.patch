@@ -1,0 +1,45 @@
+Index: app/src/main/java/com/junyoung/kiosk/MainActivity2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.junyoung.kiosk;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.TextView;\r\n\r\npublic class MainActivity2 extends AppCompatActivity {\r\n    private static final String TAG = \"MainActivity_ms\";\r\n\r\n    private TextView tvCount, tvCost;\r\n    private Button btnPlus, btnMinus, btnpayment;\r\n    private int count=1;\r\n    private int cost = 5000;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main2);\r\n\r\n        tvCount=findViewById(R.id.tv_count);\r\n        tvCount.setText(count+\"\");\r\n        tvCost=findViewById(R.id.tv_cost);\r\n        tvCost.setText(cost*count+\"\");\r\n        btnPlus=findViewById(R.id.btnP);\r\n        btnMinus=findViewById(R.id.btnM);\r\n        btnpayment=findViewById(R.id.shopping_basket_btn);\r\n\r\n        btnPlus.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                Log.d(TAG, \"onClick: btnPlus : \"+v.getClass().getName());\r\n                count++;\r\n                tvCount.setText(count+\"\");\r\n                tvCost.setText(cost*count+\"\");\r\n            }\r\n        });\r\n\r\n        btnMinus.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                if(count>1) {\r\n                    count--;\r\n                    tvCount.setText(count + \"\");\r\n                    tvCost.setText(cost*count+\"\");\r\n                }\r\n            }\r\n        });\r\n\r\n\r\n        btnpayment.setOnClickListener(new View.OnClickListener(){\r\n            public void onClick(View arg) {\r\n                Intent intent = new Intent(getApplicationContext(), donggeon1.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/junyoung/kiosk/MainActivity2.java	(revision 2a251e83092eea4d6425bb0580e4703b8bcc0a47)
++++ app/src/main/java/com/junyoung/kiosk/MainActivity2.java	(date 1622459249555)
+@@ -9,11 +9,13 @@
+ import android.widget.Button;
+ import android.widget.TextView;
+ 
++import com.junyoung.kiosk.component.ShoppingBasket;
++
+ public class MainActivity2 extends AppCompatActivity {
+     private static final String TAG = "MainActivity_ms";
+ 
+     private TextView tvCount, tvCost;
+-    private Button btnPlus, btnMinus, btnpayment;
++    private Button btnPlus, btnMinus, btnShoppingBasket;
+     private int count=1;
+     private int cost = 5000;
+ 
+@@ -28,7 +30,7 @@
+         tvCost.setText(cost*count+"");
+         btnPlus=findViewById(R.id.btnP);
+         btnMinus=findViewById(R.id.btnM);
+-        btnpayment=findViewById(R.id.shopping_basket_btn);
++        btnShoppingBasket=findViewById(R.id.shopping_basket_btn);
+ 
+         btnPlus.setOnClickListener(new View.OnClickListener() {
+             @Override
+@@ -52,9 +54,9 @@
+         });
+ 
+ 
+-        btnpayment.setOnClickListener(new View.OnClickListener(){
++        btnShoppingBasket.setOnClickListener(new View.OnClickListener(){
+             public void onClick(View arg) {
+-                Intent intent = new Intent(getApplicationContext(), donggeon1.class);
++                Intent intent = new Intent(getApplicationContext(), ShoppingBasket.class);
+                 startActivity(intent);
+             }
+         });
