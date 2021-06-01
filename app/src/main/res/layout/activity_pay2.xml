@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".donggeon1">
+
+    <TextView
+        android:id="@+id/Text_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:background="@color/blue1"
+        android:text="주문 하기"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/ImgPet"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:backgroundTint="@color/blue1"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Pay_finish2"
+        android:backgroundTint="@color/blue2"
+        android:text="결제 완료"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/Text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4B89DC"
+        android:textSize="20sp"
+        android:text="결제가 완료 되었습니다."
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/Text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4B89DC"
+        android:textSize="20sp"
+        android:text="주문 번호 "
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/Text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4B89DC"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="3"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Textday"
+        android:text="시간"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:layout_marginBottom="14dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bho"
+        android:backgroundTint="@color/blue1"
+        android:text="홈으로 돌아가기"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
