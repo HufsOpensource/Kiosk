@@ -85,6 +85,11 @@ public class MainActivity2 extends AppCompatActivity {
         btnShoppingBasket.setOnClickListener(new View.OnClickListener(){
             public void onClick(View arg) {
                 Intent intent = new Intent(getApplicationContext(), ShoppingBasket.class);
+                intent.putExtra("menuname", String.valueOf(menuName));
+                intent.putExtra("companyname", companyname);
+                intent.putExtra("menuExplain", String.valueOf(menuExplain));
+                intent.putExtra("cost", cost);
+                intent.putExtra("tvCost", String.valueOf(tvCost));
                 startActivity(intent);
             }
         });
