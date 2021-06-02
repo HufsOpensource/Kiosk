@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".donggeon1"
+
+    package="com.ppottasoft.actionbarexample">
+
+    <TextView
+        android:id="@+id/Order_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:background="@color/blue1"
+        android:text="주문 하기"
+        android:layout_gravity="center"/>
+
+
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:text="결제수단"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""/>
+
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue1"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Hufspay"
+            android:textColor="@color/white"
+            android:text="외대 페이"/>
+
+        <RadioButton
+            android:id="@+id/Toss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="토스" />
+
+        <RadioButton
+            android:id="@+id/Kakao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카카오 페이"
+            android:textColor="@color/white" />
+
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnOk"
+        android:backgroundTint="@color/blue2"
+        android:text="선택 완료"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+
+
+    <TextView
+        android:id="@+id/Text_cou1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:background="@color/blue1"
+        android:text="쿠폰적용"
+        android:layout_gravity="center"/>
+
+    <CheckBox
+        android:id="@+id/ChkAgree2"
+        android:text="쿠폰 사용하기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity=""/>
+    <RadioGroup
+        android:id="@+id/Rgroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue2"
+        android:visibility="invisible">
+
+        <CheckBox
+            android:id="@+id/Hufspay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:text="외대학생 할인 5%" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/Text_money1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:background="@color/blue1"
+        android:text="결제 금액 "
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/Text_money2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="금액          :"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/Text_money3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="할인 금액 :"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/Text_money4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="결제 금액 :"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Pay_finish"
+        android:backgroundTint="@color/blue2"
+        android:text="결제 하기"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
