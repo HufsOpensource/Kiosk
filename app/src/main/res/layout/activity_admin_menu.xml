@@ -22,7 +22,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-                android:src="@drawable/foodImage"
+
                 android:layout_height="30dp"/>
 
             <EditText
@@ -46,7 +46,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-                android:src="@drawable/foodImage"
+
                 android:layout_height="30dp"/>
 
             <EditText
@@ -68,9 +68,9 @@
             android:layout_gravity="center"
             android:maxWidth="200dp"
             android:maxHeight="200dp"
-            android:src="@drawable/menuImage"
+
             android:adjustViewBounds="true"
-            android:onClick="onClick"/>
+         />
 
 
         <Button
@@ -79,7 +79,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="사진 선택"
-            android:onClick="onClick"
+
             android:textSize="15sp"/>
 
         <Button

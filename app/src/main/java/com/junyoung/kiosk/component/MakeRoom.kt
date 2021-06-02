@@ -1,5 +1,6 @@
 package com.junyoung.kiosk.component
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -17,6 +18,9 @@ class MakeRoom : AppCompatActivity() {
     }
     fun save() {
         val myname : String = edit_myname.text.toString()
-        viewModel.addcomponyname(myname)
+        viewModel.addcompanyname(myname)
+        val intent = Intent(this,adminMenu::class.java)
+        intent.putExtra("companyname",myname)
+        startActivity(intent)
     }
 }
