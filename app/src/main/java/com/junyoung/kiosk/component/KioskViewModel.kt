@@ -11,7 +11,7 @@ class KioskViewModel: ViewModel() {
     var dataComponyName = ArrayList<FireComponyName>()
     val LiveData = MutableLiveData<ArrayList<FireData>>()
     val LiveComponyData = MutableLiveData<ArrayList<FireComponyName>>()
-    fun getData() {
+    fun getshopData() {
         db.collection("kioskpocha")
                 .addSnapshotListener{value, e->
                     if(e!=null) {
@@ -22,8 +22,9 @@ class KioskViewModel: ViewModel() {
                         val firedata = FireData(
                                 title=document.data["title"].toString(),
                                 description = document.data["description"].toString(),
-                                componyname = document.data["componyname"].toString(),
-                                image=document.data["image"].toString()
+                                companyname = document.data["companyname"].toString(),
+                                image=document.data["image"].toString(),
+                                cost = document.data["cost"] as Long?
                         )
                         data.add(firedata)
                         LiveData.value = data
@@ -31,26 +32,33 @@ class KioskViewModel: ViewModel() {
                 }
     }
     //단일 상호명을 저장하기 위한 함수
-    fun addcomponyname(item: String) {
+    fun addcompanyname(item: String) {
+        val hashdata = hashMapOf(
+                "myname" to item,
 
-        db.collection("kioskpocha")
-                .document("componyname")
-                .set(item)
+        )
+        db.collection("companyname")
+                .add(hashdata)
     }
     //Home에 저장하기 위한 모든 상호명 목록
     fun getcompanyname() {
-        db.collection("kioskpocha")
-                .document("componyname")
-                .addSnapshotListener{value,e->
-                    if(e!=null){
+        db.collection("companyname")
+                //데이터는 value  로 들어옴
+                .addSnapshotListener { value, e ->
+                    if (e != null) {
                         return@addSnapshotListener
                     }
-                    val fireComponydata  = FireComponyName(
-                            myname = value!!["myname"].toString()
-                    )
-                    dataComponyName.add(fireComponydata)
-                    LiveComponyData.value = dataComponyName
+                    dataComponyName.clear()
+                    for (document in value!!) {
+                        val firecomponydata = FireComponyName(
+                                myname = document.data["myname"].toString()
+                        )
+                        dataComponyName.add(firecomponydata)
+                        LiveComponyData.value = dataComponyName
 
+
+
+                    }
                 }
     }
     //상호명 안에 있는 데이터 넣기
@@ -58,8 +66,11 @@ class KioskViewModel: ViewModel() {
         val hashdata = hashMapOf(
                 "title" to item.title,
                 "description" to item.description,
-                "image" to item.image
+                "image" to item.image,
+                "companyname" to item.companyname,
+                "cost" to item.cost
         )
         db.collection("kioskpocha")
+                .add(hashdata)
     }
 }

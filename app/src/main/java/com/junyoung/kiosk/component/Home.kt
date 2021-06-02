@@ -25,6 +25,9 @@ class Home: AppCompatActivity() {
         image_goshop.setOnClickListener {
             startActivity(Intent(this,ShoppingBasket::class.java))
         }
+        btn_home_enterroom.setOnClickListener {
+            startActivity(Intent(this,TotalMenuList::class.java))
+        }
 
     }
 }
