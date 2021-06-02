@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".component.TotalMenuList"></activity>
-        <activity android:name=".component.adminMenu"></activity>
         <activity android:name=".MainActivity2"></activity>
 
         <activity android:name=".component.MakeRoom" />
