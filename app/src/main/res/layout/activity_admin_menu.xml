@@ -43,7 +43,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-                android:src="@drawable/foodImage"
+
                 android:layout_height="30dp"/>
 
             <EditText
@@ -95,7 +95,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-                android:src="@drawable/foodImage"
+
                 android:layout_height="30dp"/>
 
             <EditText
@@ -109,35 +109,8 @@
                 android:hint=" 메뉴 설명을 작성하세요."/>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="60">
-            <ImageView
-                android:id="@+id/user_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:maxWidth="200dp"
-                android:maxHeight="200dp"
-                android:src="@drawable/menuImage"
-                android:adjustViewBounds="true" />
 
-
-            <Button
-                android:id="@+id/btn_UploadPicture"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:background= "#000000"
-                android:layout_marginBottom="4dp"
-                android:layout_gravity="center"
-                android:text="사진 선택"
-                android:fontFamily="@font/aa"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
+     
 
         <LinearLayout
             android:layout_width="match_parent"
