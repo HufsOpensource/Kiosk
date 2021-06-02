@@ -7,17 +7,38 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".component.adminMenu">
+
+
+    <TextView
+        android:background="#000"
+        android:layout_gravity="center"
+        android:text="메뉴 등록"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:fontFamily="@font/aa"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
     <LinearLayout
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weightSum="100">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/borderbox"
-            android:layout_height="wrap_content">
+            android:background="@drawable/borderbox_woo"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
 
             <ImageView
                 android:layout_gravity="center"
@@ -33,15 +54,43 @@
                 android:inputType="text"
                 android:layout_marginTop="5dp"
                 android:background="@null"
-                android:hint="메뉴 이름을 작성하세요." />
+                android:hint=" 메뉴 이름을 작성하세요." />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/borderbox"
-            android:layout_height="wrap_content">
+            android:background="@drawable/borderbox_woo"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_margin="3dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:src="@drawable/wonImage"
+                android:layout_height="30dp"/>
+
+            <EditText
+                android:id="@+id/howMuch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="20"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint=" 가격을 작성하세요.(단위 제외)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/borderbox_woo"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_margin="3dp">
 
             <ImageView
                 android:layout_gravity="center"
@@ -57,40 +106,27 @@
                 android:inputType="text"
                 android:layout_marginTop="5dp"
                 android:background="@null"
-                android:hint="메뉴 설명을 작성하세요." />
+                android:hint=" 메뉴 설명을 작성하세요."/>
         </LinearLayout>
 
 
-        <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:maxWidth="200dp"
-            android:maxHeight="200dp"
+     
 
-            android:adjustViewBounds="true"
-         />
-
-
-        <Button
-            android:id="@+id/btn_UploadPicture"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:text="사진 선택"
-
-            android:textSize="15sp"/>
-
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:text="저장" />
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#000000"
+                android:fontFamily="@font/aa"
+                android:text="메뉴 등록하기"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
-
-
-
-
 </LinearLayout>

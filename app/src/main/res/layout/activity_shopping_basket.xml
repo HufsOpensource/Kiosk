@@ -7,6 +7,7 @@
     android:weightSum="100"
     android:layout_height="match_parent"
     tools:context=".component.ShoppingBasket">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_weight="5"
