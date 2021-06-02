@@ -29,7 +29,7 @@
                 android:background="#000000"
                 android:fontFamily="@font/aa"
                 android:foregroundTintMode="multiply"
-                android:gravity="center|right"
+                android:gravity="center"
                 android:lineSpacingExtra="0sp"
                 android:scrollbarStyle="insideOverlay"
                 android:text="@string/주문"
@@ -66,7 +66,7 @@
                 android:layout_marginBottom="4dp"
                 android:background="#000000"
                 android:fontFamily="@font/aa"
-                android:gravity="center|right"
+                android:gravity="center"
                 android:lineSpacingExtra="16sp"
                 android:text="메뉴 이름"
                 android:textAlignment="center"
@@ -193,7 +193,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/payment"
+        android:id="@+id/shopping_basket_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background = "#000000"

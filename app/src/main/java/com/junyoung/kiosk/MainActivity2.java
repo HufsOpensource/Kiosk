@@ -32,6 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnMinus=findViewById(R.id.btnM);
         btnShoppingBasket=findViewById(R.id.shopping_basket_btn);
 
+
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
