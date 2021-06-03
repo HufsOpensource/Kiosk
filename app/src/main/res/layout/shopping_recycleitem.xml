@@ -6,10 +6,14 @@
     android:weightSum="100"
     android:id="@+id/Linear_recycler"
     android:layout_height="80dp">
-    <ImageView
-        android:id="@+id/shop_image"
+    <TextView
+        android:id="@+id/item_cost"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_width="48dp"
+        android:textSize="18dp"
+        android:textColor="#000"
+        android:text="가격"
         android:layout_height="48dp"
         android:layout_weight="15"
         />

@@ -9,8 +9,10 @@ class KioskViewModel: ViewModel() {
     private var db = FirebaseFirestore.getInstance()
     var data = ArrayList<FireData>()
     var dataComponyName = ArrayList<FireComponyName>()
+    var dataShoppingData =ArrayList<FireData>()
     val LiveData = MutableLiveData<ArrayList<FireData>>()
     val LiveComponyData = MutableLiveData<ArrayList<FireComponyName>>()
+    val LiveShoppingData = MutableLiveData<ArrayList<FireData>>()
     fun getshopData() {
         db.collection("kioskpocha")
                 .addSnapshotListener{value, e->
@@ -73,4 +75,23 @@ class KioskViewModel: ViewModel() {
         db.collection("kioskpocha")
                 .add(hashdata)
     }
+    fun addShoppingData(item:FireData){
+        val firedata = FireData(
+                title=item.title,
+                description = item.description,
+                companyname = item.companyname,
+                image=item.image,
+                cost = item.cost
+        )
+
+        dataShoppingData.add(firedata)
+        LiveShoppingData.value = dataShoppingData
+
+    }
+    fun getShoppingData(): ArrayList<FireData> {
+        return dataShoppingData
+
+    }
 }
+
+

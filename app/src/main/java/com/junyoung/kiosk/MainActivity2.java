@@ -22,6 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
     private Button btnPlus, btnMinus, btnShoppingBasket;
     private int count=1;
     private Long cost;
+    private Long sendcost;
     private String companyname;
 
     @Override
@@ -50,10 +51,13 @@ public class MainActivity2 extends AppCompatActivity {
                     menuName.setText(data.get(0).getTitle().toString());
                     menuExplain.setText(data.get(0).getDescription().toString());
                     cost = data.get(0).getCost();
+                    sendcost = cost*count;
                     tvCost.setText(cost*count+"");
                     break;
                 }
             }
+
+
 
         });
 
@@ -67,6 +71,7 @@ public class MainActivity2 extends AppCompatActivity {
                 count++;
                 tvCount.setText(count+"");
                 tvCost.setText(cost*count+"");
+                sendcost = cost*count;
             }
         });
 
@@ -77,19 +82,22 @@ public class MainActivity2 extends AppCompatActivity {
                     count--;
                     tvCount.setText(count + "");
                     tvCost.setText(cost*count+"");
+                    sendcost = cost*count;
                 }
             }
         });
 
 
         btnShoppingBasket.setOnClickListener(new View.OnClickListener(){
+
             public void onClick(View arg) {
+
                 Intent intent = new Intent(getApplicationContext(), ShoppingBasket.class);
-                intent.putExtra("menuname", String.valueOf(menuName));
+                intent.putExtra("menuname", String.valueOf(menuName.getText()));
                 intent.putExtra("companyname", companyname);
-                intent.putExtra("menuExplain", String.valueOf(menuExplain));
-                intent.putExtra("cost", cost);
-                intent.putExtra("tvCost", String.valueOf(tvCost));
+                intent.putExtra("menuExplain", String.valueOf(menuExplain.getText()));
+                intent.putExtra("cost", sendcost);
+
                 startActivity(intent);
             }
         });
