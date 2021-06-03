@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".component.TotalMenuList"></activity>
         <activity android:name=".MainActivity2"></activity>
-
+        <activity android:name=".donggeon1"></activity>
+        <activity android:name=".donggeon2"></activity>
+        <activity android:name=".component.adminMenu"></activity>
         <activity android:name=".component.MakeRoom" />
         <activity android:name=".pay_page1" />
         <activity android:name=".pay_page2" />

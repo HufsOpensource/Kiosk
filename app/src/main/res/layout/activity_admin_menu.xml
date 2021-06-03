@@ -25,15 +25,13 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weightSum="100">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/borderbox_woo"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="3dp"
             android:layout_marginLeft="3dp"
@@ -43,7 +41,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-
+                android:src="@drawable/foodimage"
                 android:layout_height="30dp"/>
 
             <EditText
@@ -63,13 +61,12 @@
             android:orientation="horizontal"
             android:background="@drawable/borderbox_woo"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
             android:layout_margin="3dp">
 
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-                android:src="@drawable/wonImage"
+                android:src="@drawable/wonimage"
                 android:layout_height="30dp"/>
 
             <EditText
@@ -89,13 +86,12 @@
             android:orientation="horizontal"
             android:background="@drawable/borderbox_woo"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
             android:layout_margin="3dp">
 
             <ImageView
                 android:layout_gravity="center"
                 android:layout_width="30dp"
-
+                android:src="@drawable/foodimage"
                 android:layout_height="30dp"/>
 
             <EditText
@@ -110,12 +106,10 @@
         </LinearLayout>
 
 
-     
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="10">
+            android:layout_height="match_parent">
             <Button
                 android:id="@+id/save_btn"
                 android:layout_width="match_parent"
