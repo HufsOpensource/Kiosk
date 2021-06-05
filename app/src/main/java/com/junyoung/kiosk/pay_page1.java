@@ -25,21 +25,20 @@ public class pay_page1<dc_mn, all_mn, f_mn> extends AppCompatActivity {
     Button btnOk, pay_finish;
     static float all_mn,dc_mn,f_mn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        all_mn = 100000; //총 금액
+        Intent intent2 = getIntent();
+        all_mn = intent2.getLongExtra("cost", 0); //총 금액
         dc_mn = 0; //할인가격
         f_mn = all_mn - dc_mn; //결제 금액
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay1);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.hide();
 
         text1 = (TextView) findViewById(R.id.Order_finish);
-        //text2= (TextView) findViewById(R.id.Text2);
+        text2= (TextView) findViewById(R.id.Text2);
         chkAgree = (CheckBox) findViewById(R.id.ChkAgree);
 
         rGroup1 = (RadioGroup) findViewById(R.id.Rgroup1);
