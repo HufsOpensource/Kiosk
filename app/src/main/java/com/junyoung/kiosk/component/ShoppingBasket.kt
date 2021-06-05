@@ -2,16 +2,14 @@ package com.junyoung.kiosk.component
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.junyoung.kiosk.R
-import com.junyoung.kiosk.donggeon1
+import com.junyoung.kiosk.pay_page1
 import kotlinx.android.synthetic.main.activity_shopping_basket.*
-import java.util.ArrayList
 
 class ShoppingBasket : AppCompatActivity() {
     private val viewModel : KioskViewModel by viewModels()
@@ -39,7 +37,9 @@ class ShoppingBasket : AppCompatActivity() {
             fetchdata()
         }
         shopping_basket_btn.setOnClickListener {
-            startActivity(Intent(this,donggeon1::class.java))
+            val nextIntent = Intent(this, pay_page1::class.java)
+            nextIntent.putExtra("cost", cost)
+            startActivity(nextIntent)
         }
 
     }

@@ -13,6 +13,8 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.Toast;
 
+import com.junyoung.kiosk.component.Home;
+
 
 public class pay_page2 extends AppCompatActivity  {
     Random rnd;
@@ -91,7 +93,7 @@ public class pay_page2 extends AppCompatActivity  {
         bho.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View arg) {
-                Intent intent = new Intent(getApplicationContext(), pay_page1.class);
+                Intent intent = new Intent(getApplicationContext(), Home.class);
                 startActivity(intent);
             }
         });
